@@ -26,7 +26,7 @@ class Main extends React.Component {
             currentPage: page
         });
 
-        fetch(`http://www.omdbapi.com/?apikey=ae546d65&s=${str}${type !== 'all' ? `&type=${type}` : ''}&page=${page}`)
+        fetch(`https://www.omdbapi.com/?apikey=ae546d65&s=${str}${type !== 'all' ? `&type=${type}` : ''}&page=${page}`)
             .then(res => res.json())
             .then(data => {
                 if (data.Response === 'True') {
